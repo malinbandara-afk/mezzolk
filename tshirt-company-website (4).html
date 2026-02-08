@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezzo Clothing Pvt Ltd | Premium Promotional T-Shirts & Uniforms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF4B00;
+            --primary-dark: #CC3C00;
+            --secondary: #1A1A1A;
+            --accent: #FFD700;
+            --text: #2D2D2D;
+            --text-light: #666;
+            --bg: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.2rem;
+            color: var(--secondary);
+            letter-spacing: 2px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            filter: brightness(1.2);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            position: relative;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li {
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg);
+            color: var(--primary);
+            padding-left: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,75,0,0.15) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 5rem;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-text h1 span {
+            color: var(--primary);
+            display: block;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(255,75,0,0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,75,0,0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--secondary);
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease-out 0.4s both;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+            height: 500px;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image-card {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image-card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .hero-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-image-card:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        .hero-image-card:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .hero-image-card:nth-child(3) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .image-label {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 5%;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--bg);
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            z-index: 2;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .service-image-text {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            color: var(--white);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .service-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 5%;
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 3rem auto 0;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-number {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, var(--primary) 0%, #FF6B35 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .file-input {
+            padding: 0.8rem !important;
+            cursor: pointer;
+        }
+
+        .file-input::file-selector-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+
+        .file-input::file-selector-button:hover {
+            background: var(--primary-dark);
+        }
+
+        #formMessage {
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        #formMessage.success {
+            background: rgba(76, 175, 80, 0.2);
+            color: #2e7d32;
+        }
+
+        #formMessage.error {
+            background: rgba(244, 67, 54, 0.2);
+            color: #c62828;
+        }
+
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                height: auto;
+            }
+
+            .hero-image-card:nth-child(1),
+            .hero-image-card:nth-child(2),
+            .hero-image-card:nth-child(3) {
+                grid-column: auto;
+                grid-row: auto;
+                height: 250px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="logo.png" alt="Mezzo Clothing" class="logo-img">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+                <a href="#services">Services ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="corporate-uniforms.html">Corporate Uniforms</a></li>
+                    <li><a href="#services">Promotional T-Shirts</a></li>
+                    <li><a href="#services">Nursery Uniforms</a></li>
+                    <li><a href="#services">Event T-Shirts</a></li>
+                    <li><a href="#services">Medical Uniforms</a></li>
+                    <li><a href="embroidery.html">Embroidery</a></li>
+                    <li><a href="screen-printing.html">Screen Printing</a></li>
+                    <li><a href="dtf-printing.html">DTF Printing</a></li>
+                </ul>
+            </li>
+            <li><a href="#features">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    Premium Quality
+                    <span>Promotional T-Shirts</span>
+                    & Uniforms
+                </h1>
+                <p>
+                    From corporate uniforms to event merchandise, we manufacture high-quality promotional apparel that represents your brand with pride.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-card">
+                    <img src="corporate-uniform.png" alt="Corporate Uniforms">
+                    <div class="image-label">Premium Corporate Uniforms</div>
+                </div>
+                <div class="hero-image-card">
+                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=400&fit=crop" alt="Event T-Shirts">
+                    <div class="image-label">Event & Promotional Wear</div>
+                </div>
+                <div class="hero-image-card">
+                    <img src="https://images.unsplash.com/photo-1618176961224-0f89a0750aae?w=600&h=400&fit=crop" alt="Custom Embroidery">
+                    <div class="image-label">Custom Embroidery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Professional apparel manufacturing solutions for every need</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <a href="#services" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=400&fit=crop" alt="Promotional T-Shirts">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">PROMOTIONAL<br>T-SHIRTS</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🎯</div>
+                        <h3>Promotional T-Shirts</h3>
+                        <p>Custom-designed promotional t-shirts perfect for marketing campaigns, giveaways, and brand awareness initiatives.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="corporate-uniforms.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="corporate-uniform.png" alt="Corporate Uniforms">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">CORPORATE<br>UNIFORMS</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">💼</div>
+                        <h3>Corporate Uniforms</h3>
+                        <p>Professional corporate apparel that reflects your company's identity and maintains a consistent, polished appearance.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="#services" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=600&h=400&fit=crop" alt="Nursery Uniforms">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">NURSERY<br>UNIFORMS</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🎓</div>
+                        <h3>Nursery Uniforms</h3>
+                        <p>Comfortable, durable, and vibrant uniforms designed specifically for young children in nursery and early education settings.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="#services" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=400&fit=crop" alt="Event T-Shirts">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">EVENT<br>T-SHIRTS</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🎉</div>
+                        <h3>Event T-Shirts</h3>
+                        <p>Eye-catching event merchandise for concerts, festivals, sports events, and special occasions that attendees will love.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="#services" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop" alt="Medical Uniforms">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">MEDICAL<br>UNIFORMS</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">⚕️</div>
+                        <h3>Medical Uniforms</h3>
+                        <p>High-quality, comfortable doctor uniforms and medical scrubs that meet industry standards and professional requirements.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="#services" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea000b55?w=600&h=400&fit=crop" alt="Custom Solutions">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">CUSTOM<br>SOLUTIONS</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">✨</div>
+                        <h3>Custom Solutions</h3>
+                        <p>Specialized uniform and apparel solutions tailored to your unique business needs and specifications.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Printing Services Section -->
+        <div class="section-header" style="margin-top: 5rem;">
+            <h2>Printing & Customization Services</h2>
+            <p>Professional printing solutions for all your apparel customization needs</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <a href="embroidery.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1618176961224-0f89a0750aae?w=600&h=400&fit=crop" alt="Embroidery Services">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">EMBROIDERY</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🧵</div>
+                        <h3>Embroidery</h3>
+                        <p>Premium embroidery services for logos, text, and custom designs with superior quality and durability.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <a href="screen-printing.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?w=600&h=400&fit=crop" alt="Screen Printing">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">SCREEN PRINTING</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🎨</div>
+                        <h3>Screen Printing</h3>
+                        <p>Vibrant, long-lasting screen printing perfect for bulk orders and bold, colorful designs.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <a href="dtf-printing.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?w=600&h=400&fit=crop" alt="DTF Printing">
+                        <div class="service-image-overlay">
+                            <div class="service-image-text">DTF PRINTING</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🖨️</div>
+                        <h3>DTF Printing</h3>
+                        <p>Modern Direct-to-Film printing technology for detailed, full-color designs on any fabric type.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2 style="color: white;">Why Choose Us</h2>
+            <p style="color: rgba(255,255,255,0.7);">Excellence in every stitch, commitment in every order</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-number">100%</div>
+                <h3>Quality Guaranteed</h3>
+                <p>Premium fabrics and expert craftsmanship ensure lasting quality</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">Fast</div>
+                <h3>Quick Turnaround</h3>
+                <p>Efficient production processes deliver your order on time</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">10+</div>
+                <h3>Years Experience</h3>
+                <p>Decade of expertise in promotional apparel manufacturing</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">24/7</div>
+                <h3>Customer Support</h3>
+                <p>Always available to assist with your questions and needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Ready to Get Started?</h2>
+        <p>Fill out the form below to request a quote. Upload any reference images or design files to help us understand your requirements better.</p>
+        <form class="contact-form" id="quoteForm" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service...</option>
+                    <option value="Promotional T-Shirts">Promotional T-Shirts</option>
+                    <option value="Corporate Uniforms">Corporate Uniforms</option>
+                    <option value="Nursery Uniforms">Nursery Uniforms</option>
+                    <option value="Event T-Shirts">Event T-Shirts</option>
+                    <option value="Medical Uniforms">Medical Uniforms</option>
+                    <option value="Custom Solutions">Custom Solutions</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quantity">Estimated Quantity *</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 100" required>
+                </div>
+                <div class="form-group">
+                    <label for="deadline">Required By Date</label>
+                    <input type="date" id="deadline" name="deadline">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="message" placeholder="Please describe your requirements, design preferences, colors, sizes, etc." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="files">Upload Design/Reference Files</label>
+                <input type="file" id="files" name="files" multiple accept="image/*,.pdf,.ai,.psd" class="file-input">
+                <small style="display: block; margin-top: 0.5rem; opacity: 0.9;">Upload logos, designs, or reference images (Max 5 files, 10MB each)</small>
+            </div>
+            <button type="submit" class="btn btn-secondary" style="background: white; color: var(--primary); border: none;">
+                <span class="btn-text">Send Quote Request</span>
+                <span class="btn-loading" style="display: none;">Sending...</span>
+            </button>
+            <p id="formMessage" style="margin-top: 1rem; display: none;"></p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mezzo Clothing Pvt Ltd</h3>
+                <p>Your trusted partner in premium promotional apparel and uniform manufacturing.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#features">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4231232e2731022f2738382d6c2e29">[email&#160;protected]</a></li>
+                    <li>📱 +94 XX XXX XXXX</li>
+                    <li>📍 60/A Pamunuwa, Maharagama</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mezzo Clothing Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler with file upload
+        document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Validate file uploads
+            const fileInput = document.getElementById('files');
+            if (fileInput.files.length > 5) {
+                formMessage.textContent = 'Maximum 5 files allowed';
+                formMessage.className = 'error';
+                formMessage.style.display = 'block';
+                return;
+            }
+            
+            // Check file sizes
+            for (let file of fileInput.files) {
+                if (file.size > 10 * 1024 * 1024) { // 10MB
+                    formMessage.textContent = 'Each file must be less than 10MB';
+                    formMessage.className = 'error';
+                    formMessage.style.display = 'block';
+                    return;
+                }
+            }
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            formMessage.style.display = 'none';
+            
+            // Prepare form data
+            const formData = new FormData(this);
+            
+            try {
+                // Send to PHP backend
+                const response = await fetch('send-quote.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show success message
+                    formMessage.textContent = result.message;
+                    formMessage.className = 'success';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    throw new Error(result.message);
+                }
+                
+            } catch (error) {
+                // Show error message
+                formMessage.textContent = error.message || 'There was an error sending your request. Please try again or email us directly at sales@mezzo.lk';
+                formMessage.className = 'error';
+                formMessage.style.display = 'block';
+                
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+            }
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 
